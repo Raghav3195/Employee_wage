@@ -32,3 +32,18 @@ monthlyWage=$((daysWorked*hourWorked*wage_per_hour))
 echo "Total wages earned: $monthlyWage"
 fi
 
+
+totalWorkingHour=100
+totalWorkingDays=20
+monthlyWorking=$((daysWorked*hourWorked))
+if [ $isPresent -eq $checkAttendance ]
+then
+echo "Employee is Present"
+if [ "$daysWorked -lt $totalWorkingDays" -a "$monthlyWorking -lt $totalWorkingHour" ]
+then
+wage=$((daysWorked*hourWorked*wage_per_hour))
+echo "TotalWages: $wage"
+else
+echo "You have done exceptional performance but company is low with money, take a break:))"
+fi
+fi
