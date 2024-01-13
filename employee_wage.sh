@@ -15,3 +15,7 @@ echo "Today wages: $((hourWorked*wage_per_hour))"
 else
 echo "No payment for today"
 fi
+
+
+partTime=8
+echo "Part Time wage: $((partTime*wage_per_hour))"
